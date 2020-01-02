@@ -1,0 +1,7 @@
+[
+    {"nameReddit":"node", "category":"Programming"},
+    {"nameReddit":"learnprogramming", "category":"Programming"},
+    {"nameReddit":"askscience", "category":"Science"},
+    {"nameReddit":"haskell", "category":"Programming"},
+    {"nameReddit":"interviews", "category":"Interviews"}
+    ]
