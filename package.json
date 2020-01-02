@@ -1,0 +1,23 @@
+{
+  "name": "redlion",
+  "version": "1.0.0",
+  "description": "A tool to get informations from some subreddits",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MidnightCitizen/RedLion.git"
+  },
+  "author": "David Lonjon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MidnightCitizen/RedLion/issues"
+  },
+  "homepage": "https://github.com/MidnightCitizen/RedLion#readme",
+  "dependencies": {
+    "fast-csv": "^4.0.2",
+    "request": "^2.88.0"
+  }
+}
