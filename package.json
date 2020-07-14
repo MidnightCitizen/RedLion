@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A tool to get informations from some subreddits",
   "main": "app.js",
+  "bin": "bin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +18,9 @@
   },
   "homepage": "https://github.com/MidnightCitizen/RedLion#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "fast-csv": "^4.0.2",
+    "google-spreadsheet": "^3.0.5",
     "request": "^2.88.0"
   }
 }
