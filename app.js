@@ -17,12 +17,14 @@ const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
 
 const main = async function main() {
        // loading credentials and document
+       console.log('Before the credentials loading');
        await doc.useServiceAccountAuth({
               client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
               private_key: process.env.GOOGLE_PRIVATE_KEY,
        });
        await doc.loadInfo(); // loads document properties and worksheets
     
+       console.log('After the credentials loading');
        // getting data from second google sheet
        const sheet1 = doc.sheetsByIndex[1];
        const reddits = await sheet1.getRows();
