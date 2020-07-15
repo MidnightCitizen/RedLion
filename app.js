@@ -17,7 +17,10 @@ const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
 
 const main = async function main() {
        // loading credentials and document
-       await doc.useServiceAccountAuth(require('./credentials/creds-from-google.json'));
+       await doc.useServiceAccountAuth({
+              client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+              private_key: process.env.GOOGLE_PRIVATE_KEY,
+       });
        await doc.loadInfo(); // loads document properties and worksheets
     
        // getting data from second google sheet
