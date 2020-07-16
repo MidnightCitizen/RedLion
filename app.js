@@ -55,10 +55,13 @@ const main = async function main() {
        await sheet0.saveUpdatedCells();
 
        console.log('Ending the process');
- 
+
 }
 
+main();
 setInterval(main, process.env.LAUNCH_EACH_X_MILLISECONDS);
+
+
 
 
 
