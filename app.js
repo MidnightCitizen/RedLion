@@ -10,6 +10,7 @@ const colorHeader = require('./functions/colorHeader');
 const colorVerification = require('./functions/colorVerification');
 const colorSellers = require('./functions/colorSellers');
 const createBorders = require('./functions/createBorders');
+const updateLastLaunchDate = require('./functions/updateLastLaunchDate');
 
 
 
@@ -54,12 +55,15 @@ const main = async function main() {
        // update
        await sheet0.saveUpdatedCells();
 
+       // update time last launch date
+       updateLastLaunchDate(sheet1);
+
        console.log('Ending the process');
 
 }
 
 main();
-setInterval(main, process.env.LAUNCH_EACH_X_MILLISECONDS);
+//setInterval(main, process.env.LAUNCH_EACH_X_MILLISECONDS);
 
 
 
