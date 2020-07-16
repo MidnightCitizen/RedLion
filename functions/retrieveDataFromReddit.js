@@ -11,8 +11,8 @@ const retrieveDataFromReddit = async function retrieveDataFromReddit(listReddit)
      
       dataReddit.sort((a, b) => parseFloat(b.Members) - parseFloat(a.Members));
       return dataReddit; 
-    } catch(e) {
-      console.log(`Error when fetching for data from Redditt : ${e}`);    
+    } catch(err) {
+      console.log(`Error when fetching for data from Redditt : ${err}`);    
   }
 };
 

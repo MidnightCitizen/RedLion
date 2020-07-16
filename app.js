@@ -40,9 +40,9 @@ const main = async function main() {
        await sleep(process.env.WAITING_TIME);
        
        // insert new data
-       insertDataInGoogleSheet(sheet0, dataFromReddit);
+       await insertDataInGoogleSheet(sheet0, dataFromReddit);
       
-       await sleep(10000);
+       await sleep(20000);
        // prepare cells for style 
        await sheet0.loadCells(`A1:G${dataFromReddit.length +1}`);
 
