@@ -16,6 +16,7 @@ const createBorders = require('./functions/createBorders');
 const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
 
 const main = async function main() {
+       console.log('Launching the process');
        // loading credentials and document
        await doc.useServiceAccountAuth({
               client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
@@ -52,6 +53,8 @@ const main = async function main() {
       
        // update
        await sheet0.saveUpdatedCells();
+
+       console.log('Ending the process');
  
 }
 
