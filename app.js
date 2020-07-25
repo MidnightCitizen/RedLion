@@ -10,6 +10,7 @@ const colorHeader = require('./functions/colorHeader');
 const colorVerification = require('./functions/colorVerification');
 const colorSellers = require('./functions/colorSellers');
 const createBorders = require('./functions/createBorders');
+const updateLastLaunchDate = require('./functions/updateLastLaunchDate');
 
 
 
@@ -39,9 +40,9 @@ const main = async function main() {
        await sleep(process.env.WAITING_TIME);
        
        // insert new data
-       insertDataInGoogleSheet(sheet0, dataFromReddit);
+       await insertDataInGoogleSheet(sheet0, dataFromReddit);
       
-       await sleep(10000);
+       await sleep(20000);
        // prepare cells for style 
        await sheet0.loadCells(`A1:G${dataFromReddit.length +1}`);
 
@@ -54,12 +55,15 @@ const main = async function main() {
        // update
        await sheet0.saveUpdatedCells();
 
+       // update time last launch date
+       updateLastLaunchDate(sheet1);
+
        console.log('Ending the process');
 
 }
 
 main();
-setInterval(main, process.env.LAUNCH_EACH_X_MILLISECONDS);
+//setInterval(main, process.env.LAUNCH_EACH_X_MILLISECONDS);
 
 
 
