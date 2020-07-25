@@ -64,7 +64,7 @@ const main = async function main() {
 }
 
 main();
-//setInterval(main, process.env.LAUNCH_EACH_X_MILLISECONDS);
+setInterval(main, process.env.LAUNCH_EACH_X_MILLISECONDS);
 
 
 
