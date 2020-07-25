@@ -59,6 +59,7 @@ const main = async function main() {
        updateLastLaunchDate(sheet1);
 
        console.log('Ending the process');
+       return;
 
 }
 
